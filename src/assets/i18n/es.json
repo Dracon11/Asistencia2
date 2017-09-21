@@ -1,0 +1,14 @@
+{
+  "Inicio de sesión": "Inicio de sesión",
+  "¿No tiene una cuenta? ¡Regístrese ahora!": "¿No tiene una cuenta? ¡Regístrese ahora!",
+  "Correo": "Correo",
+  "Contraseña": "Contraseña",
+  "El usuario no existe": "El usuario no existe",
+  "La contraseña es incorrecta": "La contraseña es incorrecta",
+  "Es necesario completar el correo": "Es necesario completar el correo",
+  "Es necesario completar la contraseña": "Es necesario completar la contraseña",
+  "El correo ya existe": "El correo ya existe",
+  "Error interno": "Error interno",
+  "Dashboard principal": "Dashboard principal",
+  "Panel": "Panel"
+}

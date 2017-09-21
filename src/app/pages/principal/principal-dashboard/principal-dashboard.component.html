@@ -1,0 +1,79 @@
+<p>
+  <ngb-alert>
+    <strong>Warning!</strong> {{ "Dashboard principal" | translate }}
+  </ngb-alert>
+</p>
+
+<header>
+
+</header>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-sm-8">
+      <form [formGroup]="form"   >
+        <legend class="text-center" >Formulario <br>
+        </legend>
+
+        <div class="form-group" >
+          <label class="label-control" >Nombre de Usuario</label>
+          <select formControlName="user" class="form-control " >
+            <option *ngFor="let user of users" [value]= "user.id" >{{ user.nombres }} {{ user.apellidos }} </option>
+          </select>
+          <small class="text-danger" *ngIf="!form.controls['user'].valid && form.controls['user'].touch" >Selecciona al usuario</small>
+        </div>
+        <div class="form-group">
+            <label id="" class="label-control" >Hora de llegada</label>
+            <label class="form-control"  id="hour">0:00:00</label>
+            <!--<input id="hour" class="form-control" formControlName="hour" class="form-control " type="input"  >-->
+           <!-- <small class="text-danger" *ngIf="!form.controls['hour'].valid && form.controls['hour'].touch" >Ingresa la Hora de Llegada </small>-->
+        </div>
+        <!--
+        <div class="form-group"  >
+            <label class="label-control" >Hora de salida</label>
+            <input class="form-control" formControlName="exit" class="form-control" [disabled]="!form.valid" type="time" value="" placeholder = "9:00:00">
+            <small class="text-danger" *ngIf="!form.controls['hour'].valid && form.controls['hour'].touch" >Ingresa la Hora de Llegada </small>
+        </div> -->
+
+        <div class="form-group "><br>
+          <input type="button" (click) ="addAssistence(form.value)" [disabled]="!form.valid"
+          class="btn btn-primary expanded " value="Guardar" >
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<div  class="container" >
+    <div class="row">
+      <div class="col-10 col-sm-12 ">
+          <h4>{{ subtitle }} </h4>
+          <table class="table" >
+              <thead class="table-head">
+                <th >ID</th>
+                <th >Nombre</th>
+                <th >Apellido</th>
+                <th >Hora de Entrada</th>
+                <th >Hora de Salida</th>
+                <th >Creación del Usuario</th>
+                <th >Última Modificación</th>
+                <th>Acciones</th>
+                <th></th>
+              </thead>
+
+              <tbody *ngIf = "status" >
+                <tr class="" *ngFor="let a of assistences" >
+                  <td> {{ a.id }} </td>
+                  <td> {{ a.nombres }} </td>
+                  <td> {{ a.apellidos }} </td>
+                  <td> {{ a.hora_entrada  }} </td>
+                  <td> {{ a.hora_salida }} </td>
+                  <td> {{ a.fecha_creacion  }} </td>
+                  <td> {{ a.fecha_modificacion   }} </td>
+                  <td> <input class="btn btn-success" type="button" value="Modificar" > </td>
+                  <td> <input class="btn btn-danger" type="button" value="Eliminar" > </td>
+                </tr>
+              </tbody>
+            </table>
+      </div>
+    </div>
+  </div>

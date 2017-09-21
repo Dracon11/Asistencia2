@@ -1,0 +1,6 @@
+<div class="sidebar-outer">
+    <a class="logo d-flex align-items-center" routerLink="/principal/dashboard" (click)="closeSubMenus()" *ngIf="settings.theme.sidebarIsFixed">
+        <span class="start">Asistencia</span><span class="ng">ABCDROID</span>
+    </a>
+    <app-vertical-menu class="menuItems" [menuItems]="menuItems">></app-vertical-menu>
+</div>

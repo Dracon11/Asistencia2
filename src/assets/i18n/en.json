@@ -1,0 +1,14 @@
+{
+  "Inicio de sesión": "Member login",
+  "¿No tiene una cuenta? ¡Regístrese ahora!": "Don't have an account? Sign up now!",
+  "Correo": "Email",
+  "Contraseña": "Password",
+  "El usuario no existe": "User does not exist",
+  "La contraseña es incorrecta": "Password is incorrect",
+  "Es necesario completar el correo": "Mail must be completed",
+  "Es necesario completar la contraseña": "Password must be completed",
+  "El correo ya existe": "Email does exist",
+  "Error interno": "Internal error",
+  "Dashboard principal": "Principal dashboard",
+  "Panel": "Dashboard"
+}
